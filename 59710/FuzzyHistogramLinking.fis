@@ -1,0 +1,84 @@
+[System]
+Name='FuzzyHistogramLinking'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='L'
+Range=[0 1]
+NumMFs=3
+MF1='Black':'trimf',[-0.4 0 0.4]
+MF2='Grey':'trimf',[0.1 0.5 0.9]
+MF3='White':'trimf',[0.6 1 1.4]
+
+[Input2]
+Name='a'
+Range=[0 1]
+NumMFs=5
+MF1='Green':'trimf',[-0.3 0 0.3]
+MF2='Greenish':'trimf',[0.1 0.3 0.5]
+MF3='Red':'trimf',[0.7 1 1.3]
+MF4='aMiddle':'trimf',[0.47 0.5 0.53]
+MF5='Reddish':'trimf',[0.5 0.7 0.9]
+
+[Input3]
+Name='b'
+Range=[0 1]
+NumMFs=5
+MF1='Blue':'trimf',[-0.3 0 0.3]
+MF2='Bluish':'trimf',[0.1 0.3 0.5]
+MF3='Yellow':'trimf',[0.7 1 1.3]
+MF4='bMiddle':'trimf',[0.47 0.5 0.53]
+MF5='Yellowish':'trimf',[0.5 0.7 0.9]
+
+[Output1]
+Name='FuzzyColourHistogram'
+Range=[0 1]
+NumMFs=10
+MF1='Black':'trapmf',[-0.04 -0.02 0.02 0.04]
+MF2='DarkGrey':'trapmf',[0.0187 0.0636246786632391 0.0958 0.133]
+MF3='Red':'trapmf',[0.0983 0.136 0.190874035989717 0.233]
+MF4='Brown':'trapmf',[0.213 0.238 0.294987146529563 0.327]
+MF5='Yellow':'trapmf',[0.313 0.349 0.417095115681234 0.451]
+MF6='Green':'trapmf',[0.426 0.478 0.541773778920309 0.593]
+MF7='Blue':'trapmf',[0.563 0.599614395886889 0.673 0.716]
+MF8='Cyan':'trapmf',[0.687 0.731 0.804 0.845115681233933]
+MF9='Magenta':'trapmf',[0.823 0.868 0.932519280205655 0.978]
+MF10='White':'trapmf',[0.96 0.98 1.02 1.04]
+
+[Rules]
+1 4 4, 1 (1) : 1
+3 4 4, 10 (1) : 1
+2 3 3, 3 (1) : 1
+0 5 3, 4 (1) : 1
+3 1 3, 6 (1) : 1
+3 1 5, 6 (1) : 1
+1 0 1, 7 (1) : 1
+3 1 2, 8 (1) : 1
+2 4 4, 2 (1) : 1
+0 2 2, 7 (1) : 1
+0 3 2, 7 (1) : 1
+3 0 3, 5 (1) : 1
+1 5 2, 7 (1) : 1
+0 3 1, 7 (1) : 1
+2 5 5, 3 (1) : 1
+3 5 5, 5 (1) : 1
+1 5 5, 3 (1) : 1
+0 5 3, 5 (1) : 1
+1 0 2, 7 (1) : 1
+2 0 1, 7 (1) : 1
+2 5 2, 9 (1) : 1
+2 4 2, 8 (1) : 1
+2 4 5, 4 (1) : 1
+3 4 5, 5 (1) : 1
+2 3 4, 3 (1) : 1
+2 5 4, 3 (1) : 1
+3 5 2, 9 (1) : 1
